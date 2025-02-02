@@ -64,10 +64,10 @@ def main():
     
     if st.button("Generate Product Discovery Report"):
         if business_idea and target_user_group:
-        workflow = ProductDiscoveryWorkflow(business_idea, target_user_group)
-        results = workflow.run_workflow()
-        st.subheader("Summary of Results")
-        st.write(results.raw)
+            workflow = ProductDiscoveryWorkflow(business_idea, target_user_group)
+            results = workflow.run_workflow()
+            st.subheader("Summary of Results")
+            st.write(results.raw)
         else:
             st.warning("Please enter business idea and target user group.")
     else:
