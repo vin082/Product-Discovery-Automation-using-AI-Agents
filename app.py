@@ -57,7 +57,7 @@ def main():
     #if openai_api_key:
     #openai_api_key = st.secrets['OPENAI_API_KEY']
     if validate_openai_key(openai_api_key):
-        st.session_state['openai_api_key'] = openai_api_key
+        st.session_state['OPENAI_API_KEY'] = openai_api_key
         st.success("OpenAI API loaded successfully")
     business_idea = st.text_input("Enter your business idea:")
     target_user_group = st.text_input("Enter target user group:")
