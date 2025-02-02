@@ -8,23 +8,6 @@ from workflow import ProductDiscoveryWorkflow
 
 from openai import OpenAI
 
-def validate_openai_key(api_key):
-    """
-    Validates the OpenAI API key by making a test request using the new API syntax.
-    """
-    try:
-        client = OpenAI(api_key=api_key)
-        # Make a minimal API call to test the key
-        client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": "test"}],
-            max_tokens=5
-        )
-        return True
-    except Exception as e:
-        st.error(f"Invalid API key: {str(e)}")
-        return False
-
 def format_results(results):
     """
     Formats the results from the workflow into readable sections.
@@ -57,9 +40,9 @@ def main():
     #print("openai_api_key")
     #if openai_api_key:
     #openai_api_key = st.secrets['OPENAI_API_KEY']
-    if validate_openai_key(openai_api_key):
-        st.session_state['OPENAI_API_KEY'] = openai_api_key
-        st.success("OpenAI API loaded successfully")
+    #if validate_openai_key(openai_api_key):
+        #st.session_state['OPENAI_API_KEY'] = openai_api_key
+        #st.success("OpenAI API loaded successfully")
     business_idea = st.text_input("Enter your business idea:")
     target_user_group = st.text_input("Enter target user group:")
     
