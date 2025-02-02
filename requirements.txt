@@ -1,0 +1,13 @@
+streamlit
+python-dotenv
+openai
+crewai
+crewai-tools
+langchain
+pandas
+tenacity 
+langchain-community
+duckduckgo-search
+langchain-core
+chromadb>=0.4.0
+pysqlite3-binary
