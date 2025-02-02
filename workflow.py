@@ -8,7 +8,7 @@ from tasks import
     create_market_research_task, create_user_research_task, 
     create_assumptions_task, create_backlog_task, 
     create_summarizer_task
-)
+
 
 class ProductDiscoveryWorkflow:
     def __init__(self, business_idea, target_user_group):
