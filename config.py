@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 def load_config():
     load_dotenv()
