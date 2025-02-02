@@ -54,8 +54,8 @@ def main():
             st.write(results.raw)
         else:
             st.warning("Please enter business idea and target user group.")
-    else:
-        st.error("Invalid OpenAI API Key.Please check your configuration.")
+    #else:
+        #st.error("Invalid OpenAI API Key.Please check your configuration.")
 
 if __name__ == "__main__":
     main()
