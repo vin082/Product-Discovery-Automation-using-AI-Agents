@@ -4,7 +4,7 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 import streamlit as st
 from workflow import ProductDiscoveryWorkflow
-from config import load_config
+#from config import load_config
 
 from openai import OpenAI
 
@@ -48,7 +48,8 @@ def format_results(results):
         return f"Error formatting results: {str(e)}"
 
 def main():
-    load_config()
+    #load_config()
+    openai_api_key = st.secrets["OPENAI_API_KEY"]
     st.title("Product Discovery Lifecycle Automation")
     
     # Input fields
